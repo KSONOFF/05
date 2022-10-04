@@ -5,20 +5,20 @@
 
 int main(int argc, char *argv[]) {
 	
-	char c;
-	int num =0;
+	int sum =0; //누적으로 더하니까 초기화 필요
+	int x;
+	int i; 
 	
-	printf("문자열을 입력하세요:");
+	printf("정수를 입력하시오:");
+	scanf("%d", &x);
+	
+	for(i=0;i<=x;i++)
+	   sum=sum+i;
 	
 	
-	while((c=getchar())!='\n')// 입력문자가 개행문자가 나올때까지 반 
-	{
-	  if(c>='0' && c<='9')//입력된 글자(c)가 숫자인가?
-	  	 num = num+1;//참이면 숫자를 센다.	
-	}
 	
-	printf("숫자의 개수는 %i입니다.\n",num);
-	
+	printf("누적 결과는 %i입니다.\n", sum);
+		
 		 
 	return 0;
 }
