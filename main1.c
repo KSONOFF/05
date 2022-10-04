@@ -5,20 +5,26 @@
 
 int main(int argc, char *argv[]) {
 	
-	int sum =0; //누적으로 더하니까 초기화 필요
-	int x;
-	int i; 
+	int x,y;
+	char op;
+	int result;
 	
-	printf("정수를 입력하시오:");
-	scanf("%d", &x);
+	printf("식을 입력하시오:");
+	scanf("%d %c %d",&x,&op,&y);
 	
-	for(i=0;i<=x;i++)
-	   sum=sum+i;
-	
-	
-	
-	printf("누적 결과는 %i입니다.\n", sum);
+	if(op=='+')
+		result = x + y;
 		
+	else if(op == '-')
+		result = x- y;
+		
+	else if(op == '*')
+		result = x* y;
+	
+	else
+		result = x/y;
+	
+	printf("=%d", result);
 		 
 	return 0;
 }
