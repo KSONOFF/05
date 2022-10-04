@@ -5,26 +5,37 @@
 
 int main(int argc, char *argv[]) {
 	
-	int x,y;
-	char op;
-	int result;
+	int answer = 59;
+	int trial = 0;
 	
-	printf("식을 입력하시오:");
-	scanf("%d %c %d",&x,&op,&y);
 	
-	if(op=='+')
-		result = x + y;
+	
+	do
+	{
+		printf("guess a number:");
+		scanf("%d", &answer);
+		trial++;
 		
-	else if(op == '-')
-		result = x- y;
+		if(answer<59)
+			printf("high!\n");
+			
 		
-	else if(op == '*')
-		result = x* y;
+		else if(answer>59)
+			printf("low!\n");
+			
 	
-	else
-		result = x/y;
+		
+		
+		
+		
+			
+		
+	}
+	while(answer!=59);
 	
-	printf("=%d", result);
-		 
+	
+		printf("number of trial = %i\n", trial);
+		
+	 
 	return 0;
 }
